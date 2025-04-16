@@ -2532,3 +2532,148 @@ a.product-card-link {
 }
 /* Ensure this CSS rule exists */
 
+
+
+/* ============================================= */
+/*            MODAL (POP-UP) STYLES            */
+/* ============================================= */
+
+/* The Overlay (background dimmer) */
+.modal-overlay {
+    display: none; /* Hidden by default - JS changes this to flex */
+    position: fixed; /* Stay in place even when scrolling */
+    inset: 0; /* Cover the entire viewport (top: 0; right: 0; bottom: 0; left: 0;) */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    z-index: 1000; /* Ensure it's on top of other content */
+
+    /* Flexbox to center the content box */
+    justify-content: center;
+    align-items: center;
+
+    /* Optional: Add transition for fade-in */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Style to add via JS for fade-in (Optional) */
+.modal-overlay.is-visible {
+    opacity: 1;
+}
+
+/* The Content Box (the actual pop-up window) */
+.modal-content {
+    background-color: #ffffff; /* White background */
+    padding: 30px 40px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative; /* Needed for absolute positioning of the close button */
+    width: 90%; /* Max width relative to viewport */
+    max-width: 500px; /* Maximum width of the modal */
+    max-height: 90vh; /* Maximum height relative to viewport */
+    overflow-y: auto; /* Add scrollbar if content is too tall */
+
+    /* Optional: Add animation */
+    transform: translateY(-20px) scale(0.95);
+    transition: transform 0.3s ease-out;
+}
+
+/* Style to add via JS for animation (Optional) */
+.modal-overlay.is-visible .modal-content {
+     transform: translateY(0) scale(1);
+}
+
+/* Close Button (X) */
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem; /* Make the 'X' larger */
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    color: #333;
+}
+
+/* Styling for content inside the modal */
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--color-purple-deep); /* Use your theme color */
+    text-align: center;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-content .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.modal-content .form-group input[type="text"],
+.modal-content .form-group input[type="email"],
+.modal-content .form-group input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.modal-content .form-group input:focus {
+     border-color: var(--color-purple-deep);
+     outline: none;
+     box-shadow: 0 0 0 2px rgba(74, 20, 140, 0.2); /* Adjust color */
+}
+
+
+.modal-content .btn-submit-modal { /* Style submit button inside modal */
+    padding: 12px 20px;
+    background-color: var(--color-gold-accent); /* Use your theme colors */
+    color: var(--color-purple-deep);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.modal-content .btn-submit-modal:hover {
+     filter: brightness(0.9); /* Example hover */
+}
+
+/* Styling for the switch links (e.g., "Don't have account?") */
+.modal-content p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.modal-content .switch-link-btn { /* Style the button-like links */
+    background: none;
+    border: none;
+    color: var(--color-gold-accent); /* Link color */
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+}
+.modal-content .switch-link-btn:hover {
+    color: var(--color-purple-deep);
+}
