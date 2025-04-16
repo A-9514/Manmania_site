@@ -563,3 +563,151 @@ document.addEventListener('DOMContentLoaded', function() {
              }
         });
     } // End reviewForm check
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- Get Modal Elements ---
+        const signInModal = document.getElementById('signin-modal');
+        const joinNowModal = document.getElementById('joinnow-modal');
+        const subscribeModal = document.getElementById('subscribe-modal');
+        const allModals = document.querySelectorAll('.modal-overlay'); // Assuming modals have this class
+    
+        // --- Get Trigger Button Elements ---
+        const signInBtn = document.getElementById('signin-btn-header');
+        const joinNowBtn = document.getElementById('joinnow-btn-header');
+        // *** IMPORTANT: Update this selector if your subscribe trigger is different ***
+        // For example, if it's a button inside a form: '#newsletter-form .subscribe-button'
+        const subscribeBtn = document.getElementById('subscribe-trigger-btn');
+    
+        // --- Get Close Button Elements (within each modal) ---
+        // Using optional chaining (?) in case a modal doesn't exist on the page
+        const closeSignInBtn = signInModal?.querySelector('.modal-close-btn');
+        const closeJoinNowBtn = joinNowModal?.querySelector('.modal-close-btn');
+        const closeSubscribeBtn = subscribeModal?.querySelector('.modal-close-btn');
+    
+        // --- Reusable Functions ---
+        function openModal(modalElement) {
+            if (modalElement) {
+                // Close any other potentially open modals first (optional)
+                // allModals.forEach(m => m.style.display = 'none');
+    
+                modalElement.style.display = 'flex'; // Use 'flex' to potentially center content
+                // Optional: Add a class for CSS transitions/animations
+                // modalElement.classList.add('is-visible');
+                // Optional: Trap focus inside the modal for accessibility
+                // trapFocus(modalElement);
+            } else {
+                console.warn("Attempted to open a modal that doesn't exist in the HTML.");
+            }
+        }
+    
+        function closeModal(modalElement) {
+            if (modalElement) {
+                modalElement.style.display = 'none';
+                // Optional: Remove class for CSS transitions/animations
+                // modalElement.classList.remove('is-visible');
+                // Optional: Release focus trap
+                // releaseFocus();
+            }
+        }
+    
+        // --- Attach Event Listeners for Opening Modals ---
+    
+        // Sign In
+        if (signInBtn && signInModal) {
+            signInBtn.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default action if it's an <a> tag
+                openModal(signInModal);
+            });
+        } else if (signInBtn && !signInModal) {
+             console.warn("Sign In button found, but corresponding '#signin-modal' is missing in the HTML.");
+        }
+    
+        // Join Now
+        if (joinNowBtn && joinNowModal) {
+            joinNowBtn.addEventListener('click', (event) => {
+                event.preventDefault();
+                openModal(joinNowModal);
+            });
+        } else if (joinNowBtn && !joinNowModal) {
+             console.warn("Join Now button found, but corresponding '#joinnow-modal' is missing in the HTML.");
+        }
+    
+        // Subscribe
+        // Note: If subscribe is triggered by form *submission*, the logic is different.
+        // This assumes a simple button opens a modal *before* submission.
+        if (subscribeBtn && subscribeModal) {
+            subscribeBtn.addEventListener('click', (event) => {
+                event.preventDefault();
+                openModal(subscribeModal);
+            });
+        } else if (subscribeBtn && !subscribeModal) {
+             console.warn("Subscribe button found, but corresponding '#subscribe-modal' is missing in the HTML.");
+        }
+    
+        // --- Attach Event Listeners for Closing Modals ---
+    
+        // Close Buttons (X)
+        if (closeSignInBtn) {
+            closeSignInBtn.addEventListener('click', () => closeModal(signInModal));
+        }
+        if (closeJoinNowBtn) {
+            closeJoinNowBtn.addEventListener('click', () => closeModal(joinNowModal));
+        }
+        if (closeSubscribeBtn) {
+            closeSubscribeBtn.addEventListener('click', () => closeModal(subscribeModal));
+        }
+    
+        // Clicking the Overlay Background
+        allModals.forEach(modal => {
+            if (modal) {
+                modal.addEventListener('click', (event) => {
+                    // Check if the click was directly on the overlay (modal element itself)
+                    // and NOT on its content (event.target)
+                    if (event.target === modal) {
+                        closeModal(modal);
+                    }
+                });
+            }
+        });
+    
+        // Pressing the Escape Key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                allModals.forEach(modal => {
+                    // Check if the modal is currently displayed before closing
+                    if (modal && modal.style.display === 'flex') { // Match display style used in openModal
+                        closeModal(modal);
+                    }
+                    // If using classes:
+                    // if (modal && modal.classList.contains('is-visible')) {
+                    //    closeModal(modal);
+                    // }
+                });
+            }
+        });
+    
+        // --- Featured Pop-up ---
+        // Add logic here if you have a *specific* pop-up for "Featured".
+        // It's more common for "Featured" to be a link to a section or page.
+        // Example if you had a featured modal:
+        /*
+        const featuredBtn = document.getElementById('featured-trigger-btn'); // Example ID
+        const featuredModal = document.getElementById('featured-modal'); // Example ID
+        const closeFeaturedBtn = featuredModal?.querySelector('.modal-close-btn');
+    
+        if (featuredBtn && featuredModal) {
+            featuredBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(featuredModal);
+            });
+        }
+        if (closeFeaturedBtn && featuredModal) {
+            closeFeaturedBtn.addEventListener('click', () => closeModal(featuredModal));
+        }
+        */
+    
+    
+        // --- Other JavaScript code for your site can go here ---
+    
+    }); // End DOMContentLoaded Listener
