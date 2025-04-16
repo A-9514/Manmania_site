@@ -1,0 +1,657 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title will be updated by JavaScript -->
+    <title>Saree Details - Woven Grace</title>
+    <!-- Link the SAME stylesheet as index.html -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="saree-detail.css">
+    <!-- Link the SAME Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Re-use Header from index.html -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                 <!-- Make logo link back to index.html -->
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none; gap: 10px;">
+                    <img src="https://www.hobbycraft.co.uk/on/demandware.static/-/Sites-hobbycraft-uk-master/default/dw15dc6fa6/images/large/647153_1001_1_-poly-silk-satin-per-metre-blue_800.jpg" alt="Woven Grace Logo Icon" style="max-height: 40px;">
+                    <span class="logo-text">Woven Grace</span>
+                 </a>
+            </div>
+            <nav class="main-nav">
+                 <ul>
+                    <li><a href="index.html">Home</a></li> <!-- Ensure this links correctly -->
+                    <li><a href="index.html#explore-categories">Collections</a></li>
+                    <li><a href="index.html#featured-saree">Featured</a></li>
+                    <li><a href="index.html#newsletter-section">Subscribe</a></li>
+                    <li><a href="index.html#why-choose">Woven Style</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <!-- Include IDs if header button JS needs them -->
+                <button id="signin-btn-header" class="btn btn-signin">Sign In</button>
+                <button id="joinnow-btn-header" class="btn btn-join">Join Now</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="saree-detail-page container">
+
+        <!-- Back Link -->
+        <div class="back-link-wrapper">
+             <!-- Link back to the collections section on index page -->
+            <a href="index.html#saree-collections" class="back-link">← Back to Collections</a>
+        </div>
+
+        <div class="detail-layout">
+
+            <!-- Main Content Area -->
+            <div class="saree-detail-main">
+                <!-- Image Area -->
+                <div class="detail-image-wrapper">
+                     <!-- Placeholder Image - JS will update src and alt -->
+                    <img src="https://cliosilks.com/cdn/shop/files/DSC04421_1800x1800.jpg?v=1700922359"  style="width: 300px; height: auto;"alt="Regal Red Kanjivaram">
+                    <!-- Tags on Image (Can be updated by JS if needed) -->
+                    <!-- <span class="tag-overlay on-detail silk">Silk</span> -->
+                    <!-- <span class="tag-overlay on-detail kanjivaram">Kanjivaram</span> -->
+                </div>
+
+                <!-- Text Details -->
+                 <!-- JS will update textContent -->
+                <h1 class="detail-title">Regal Red Kanjivaram</h1>
+
+                <div class="detail-rating-reviews">
+                    <!-- Static for now, JS could update -->
+                    <span class="stars">★★★★☆</span>
+                    <a href="#reviews-section" class="reviews-link">( Reviews)</a>
+                </div>
+
+                 <!-- JS will update textContent -->
+                <p class="detail-description">
+
+                </p>
+
+                <div class="detail-specs">
+                    <h3>Details & Specifications</h3>
+                    <!-- JS will populate this list -->
+
+                    <ul>
+                        <li> name: "Regal Red Kanjivaram",
+                            <li>description: "Pure silk, gold zari. An exquisite piece of traditional craftsmanship, perfect for weddings and grand occasions.",</li>
+                            <li>Price: "$350",       </li>
+                                <li>fabric: "Pure Kanjivaram Silk",</li>
+                                    <li>zari: "Tested Gold Zari",</li>
+                                        <li>occasion: "Bridal, Wedding, Festive",</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar Area -->
+            <aside class="sidebar related-items-sidebar">
+                <h3>You Might Also Like</h3>
+                 <!-- Static placeholders for now -->
+                <ul class="similar-items-list">
+                    <li>
+                        <a href="#" class="similar-item"> <!-- Link placeholder -->
+                            <img src="https://reewazinternational.com/wp-content/uploads/formidable/6/10361-RICH-PALLU-FANCY-ETHNIC-SOFT-KANCHIVARAM-SILK-SAREES-COLLECTION-BY-REEWAZ-3-1.jpeg" alt="Similar Saree 1">
+                            <div class="similar-item-info">
+                                <h4>Azure Blue Kanjivaram</h4>
+                                <span>Kanjivaram</span>
+                            </div>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="#" class="similar-item">
+                            <img src="https://wholetex.sgp1.cdn.digitaloceanspaces.com/full/kanchivaram-green-silk-sarees-94.jpg" alt="Similar Saree 2">
+                            <div class="similar-item-info">
+                                <h4>Emerald Kanjivaram</h4>
+                                <span>Kanjivaram</span>
+                            </div>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="#" class="similar-item">
+                             <img src="https://wholetex.sgp1.cdn.digitaloceanspaces.com/full/kanchivaram-pure-heavy-organza-silk-saree-318.jpg" alt="Similar Saree 3">
+                            <div class="similar-item-info">
+                                <h4>Diamond Kanjivaram</h4>
+                                <span>Kanjivaram</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                 <!-- Link back to index page collections -->
+                <a href="index.html#explore-categories" class="btn view-all-btn">View All Collections ></a>
+            </aside>
+
+        </div> <!-- End detail-layout -->
+
+  <!-- ======================== REVIEWS SECTION START ======================== -->
+<section id="reviews-section" class="reviews-section">
+    <h2>Customer Reviews</h2>
+
+    <!-- Existing Reviews List (Populated by JS) -->
+    <div class="reviews-list" id="existingReviews">
+        <!-- Placeholder - JS should replace this content -->
+        <p style="text-align: center; color: #666;">Loading reviews...</p>
+
+        <!-- Example Structure (JS should generate this dynamically) -->
+        <!--
+        <div class="review-item">
+            <div class="review-header">
+                <span class="review-author">Jane D.</span>
+                <span class="review-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </span>
+                <span class="review-date">April 15, 2025</span>
+            </div>
+            <p class="review-text">Absolutely gorgeous saree! The quality is amazing.</p>
+        </div>
+        <div class="review-item">
+            <div class="review-header">
+                <span class="review-author">Priya K.</span>
+                <span class="review-rating">
+                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                </span>
+                <span class="review-date">April 10, 2025</span>
+            </div>
+            <p class="review-text">Very beautiful color and soft silk. Took a little while to ship.</p>
+        </div>
+         -->
+    </div>
+    <!-- Add Load More Button if using pagination
+    <button class="btn load-more-reviews-btn">Load More Reviews</button>
+    -->
+
+    <!-- Leave a Review Form -->
+    <div class="leave-review sidebar-widget"> <!-- Re-using sidebar-widget class for consistent box styling -->
+       <h3><i class="fas fa-star"></i> Leave a Review</h3>
+
+       <!-- Add novalidate to allow our custom + browser validation flow -->
+       <form id="reviewForm" novalidate>
+                               <!-- Star Rating Input Area -->
+                               <div class="star-rating">
+                                <label for="ratingValue" class="sr-only">Rating:</label> <!-- Screen reader label -->
+                                <!-- THIS SPAN CONTAINS THE CLICKABLE STARS -->
+                                <span class="stars">
+                                    <i class="far fa-star" data-value="1" aria-label="1 star" title="1 star"></i>
+                                    <i class="far fa-star" data-value="2" aria-label="2 stars" title="2 stars"></i>
+                                    <i class="far fa-star" data-value="3" aria-label="3 stars" title="3 stars"></i>
+                                    <i class="far fa-star" data-value="4" aria-label="4 stars" title="4 stars"></i>
+                                    <i class="far fa-star" data-value="5" aria-label="5 stars" title="5 stars"></i>
+                                </span>
+                                <!-- Feedback text ("Very Good!") appears here -->
+                                <span id="ratingFeedbackText" class="rating-feedback" aria-live="polite"></span>
+                                <!-- Hidden input to store the actual rating value -->
+                                <input type="hidden" name="rating" id="ratingValue" value="0">
+                            </div>
+                            <!-- End Star Rating Input Area -->
+
+           <!-- Textarea for the review comment -->
+           <div class="form-group">
+                <label for="reviewText" class="sr-only">Your Review:</label> <!-- Screen reader label -->
+                <textarea name="reviewText"
+                          id="reviewText"
+                          placeholder="Share your experience with this saree..."
+                          rows="4"
+                          required
+                          aria-required="true"
+                          aria-label="Review text"></textarea>
+                <!-- Area for potential JS-based error messages if needed -->
+                <div class="error-message" id="reviewTextError" style="color: red; font-size: 0.9em; margin-top: 5px;"></div>
+            </div>
+
+
+           <button type="submit" class="submit-review-btn">Submit Review</button>
+       </form>
+
+        <!-- Confirmation message (hidden by default) -->
+       <div id="reviewConfirmation" class="review-confirmation-message" style="display: none;" aria-live="polite">
+            Thank you for your review!
+       </div>
+   </div>
+</section>
+<!-- ======================== REVIEWS SECTION END ========================== -->
+
+
+<!-- ======================== CSS FOR REVIEWS SECTION ====================== -->
+
+<style>
+    /* Reviews Section General Styling */
+    .star-rating .stars {
+    cursor: pointer;
+    font-size: 1.8rem; /* Or your desired size */
+    color: #ddd;       /* Default empty star color */
+    line-height: 1; /* Prevent extra height */
+    }
+    .reviews-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #eee;
+    }
+    .reviews-section h2 {
+        font-size: 1.6rem;
+        color: #4a148c; /* Match other titles */
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    /* Existing Reviews List */
+    .reviews-list {
+        margin-bottom: 2rem;
+        max-width: 800px; /* Optional: Limit width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .review-item {
+        border-bottom: 1px dashed #eee;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .review-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    /* === Modify CSS rules inside the <style> block or style.css === */
+
+/* Existing Reviews List Item Header */
+.review-header {
+    display: flex;
+    /* CHANGE THIS: Instead of space-between, align items to the start */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: baseline; /* Align text baselines for better look */
+    margin-bottom: 0.75rem; /* Slightly more space below header */
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust gap between author, stars, date */
+}
+
+/* Review Author Styling (No change needed usually) */
+.review-author {
+    font-weight: 600;
+    color: #333;
+    margin-right: 5px; /* Add slight space after author */
+}
+
+/* Review Rating (Stars) Styling (No change needed usually) */
+.review-rating {
+    font-size: 1.1rem;
+    color: #f39c12;
+    line-height: 1; /* Prevent extra height */
+}
+.review-rating .fas { font-weight: 900; }
+.review-rating .far { font-weight: 400; }
+
+/* Review Date Styling */
+.review-date {
+    font-size: 0.85rem;
+    color: #888;
+    /* ADD THIS: Push the date to the far right */
+    margin-left: auto;
+    /* ADD THIS: Prevent date from wrapping */
+    white-space: nowrap;
+     /* ADD THIS: Ensure some space before the date if line wraps */
+     padding-left: 15px;
+}
+
+/* Review Text Styling */
+.review-text {
+    color: #555;
+    line-height: 1.6;
+    margin: 0; /* Keep margin 0 */
+    /* ADD THIS: Ensure it starts below the header */
+    clear: both; /* Not usually needed with flex/grid, but safe */
+    padding-top: 5px; /* Small space between header and text */
+}
+
+/* --- Optional: Ensure Leave a Review Form elements are spaced --- */
+
+/* Add some margin below the star rating row */
+.leave-review .star-rating {
+    margin-bottom: 1.5rem; /* More space before textarea */
+}
+
+/* Add margin below the textarea */
+.leave-review .form-group { /* Ensure textarea is wrapped in form-group */
+    margin-bottom: 1.5rem; /* Space before button */
+}
+
+
+    /* Star Rating Input Area */
+    .star-rating {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+    .star-rating .stars {
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: #ddd; /* Default empty star color */
+        line-height: 1;
+    }
+    .star-rating .stars i {
+        transition: color 0.2s ease-in-out;
+    }
+    .star-rating .stars i:hover { /* Hover effect */
+        color: #f7d794; /* Lighter gold on hover */
+    }
+    .star-rating .stars i.selected { /* Selected state */
+        color: #f39c12; /* Gold/Yellow star color */
+    }
+     /* Ensure Font Awesome solid/regular classes work */
+    .star-rating .stars .fas { font-weight: 900; }
+    .star-rating .stars .far { font-weight: 400; }
+
+    /* Feedback Text ("Very Good!") */
+    .rating-feedback {
+        font-weight: 500;
+        color: #e67e22; /* Warm orange color */
+        font-size: 0.95rem;
+        background-color: #fff8e1; /* Light yellow background */
+        padding: 0.2rem 0.7rem;
+        border-radius: 4px;
+        border: 1px solid #ffecb3;
+        display: none; /* Hidden by default, shown by JS */
+        white-space: nowrap;
+    }
+
+    /* Textarea Styling */
+    .form-group { margin-bottom: 1rem; } /* Add spacing for textarea */
+    .leave-review textarea {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-family: inherit; /* Use site font */
+        box-sizing: border-box;
+        background-color: #fff;
+        font-size: 1rem;
+        line-height: 1.5;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .leave-review textarea:focus {
+        outline: none;
+        border-color: #ffa726; /* Match button gradient end color */
+        box-shadow: 0 0 0 2px rgba(255, 167, 38, 0.2);
+    }
+    /* Style for browser validation popup (cannot be fully styled, but border indicates invalid) */
+    .leave-review textarea:invalid {
+         border-color: #e74c3c; /* Red border when invalid */
+    }
+    .leave-review textarea:focus:invalid {
+          box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2); /* Red focus shadow */
+     }
+
+
+    /* Submit Button Styling */
+    .submit-review-btn {
+        padding: 0.8rem 1.8rem;
+        background-image: linear-gradient(to right, #ffcc80, #ffb74d, #ffa726); /* Yellow/Orange gradient */
+        color: #424242; /* Darker text for contrast */
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: opacity 0.2s ease;
+        align-self: flex-start; /* Keep aligned left */
+    }
+    .submit-review-btn:hover {
+        opacity: 0.9;
+    }
+
+     /* Confirmation Message Styling */
+    .review-confirmation-message {
+        margin-top: 1rem;
+        padding: 0.8rem 1rem;
+        background-color: #e8f5e9; /* Light green background */
+        color: #2e7d32; /* Dark green text */
+        border: 1px solid #a5d6a7;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    /* Screen reader only class */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+</style>
+<!-- ======================== END CSS FOR REVIEWS ========================== -->
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Star Rating & Feedback Logic ---
+    const starsContainer = document.querySelector('#reviewForm .star-rating .stars');
+    const ratingInput = document.getElementById('ratingValue');
+    const ratingFeedbackSpan = document.getElementById('ratingFeedbackText');
+
+    const ratingMap = {
+        1: "Poor",
+        2: "Fair",
+        3: "Good",
+        4: "Very Good!",
+        5: "Excellent!"
+    };
+
+    // Function to update stars and feedback text
+    function updateRatingDisplay(value) {
+        const ratingValue = parseInt(value) || 0;
+        const stars = starsContainer ? starsContainer.querySelectorAll('i') : [];
+
+        stars.forEach(star => {
+            const starValue = parseInt(star.getAttribute('data-value'));
+            if (starValue <= ratingValue) {
+                star.classList.add('selected', 'fas'); // Make solid
+                star.classList.remove('far');
+            } else {
+                star.classList.remove('selected', 'fas');
+                star.classList.add('far'); // Make outline
+            }
+        });
+
+        if (ratingFeedbackSpan) {
+            if (ratingValue > 0 && ratingMap[ratingValue]) {
+                ratingFeedbackSpan.textContent = ratingMap[ratingValue];
+                ratingFeedbackSpan.style.display = 'inline-block'; // Show feedback
+            } else {
+                ratingFeedbackSpan.textContent = '';
+                ratingFeedbackSpan.style.display = 'none'; // Hide feedback
+            }
+        }
+    }
+
+    if (starsContainer && ratingInput && ratingFeedbackSpan) {
+        const allStars = starsContainer.querySelectorAll('i');
+
+        allStars.forEach(star => {
+            // Mouseover: Temporarily show rating
+            star.addEventListener('mouseover', () => {
+                updateRatingDisplay(star.getAttribute('data-value'));
+            });
+
+            // Mouseout: Revert to actual selected rating
+            star.addEventListener('mouseout', () => {
+                updateRatingDisplay(ratingInput.value);
+            });
+
+            // Click: Set the rating permanently
+            star.addEventListener('click', () => {
+                const clickedValue = star.getAttribute('data-value');
+                ratingInput.value = clickedValue;
+                updateRatingDisplay(clickedValue); // Update display permanently
+            });
+        });
+
+        // Set initial display based on current value (usually 0)
+        updateRatingDisplay(ratingInput.value);
+    }
+
+
+    // --- Review Form Submission Logic ---
+    const reviewForm = document.getElementById('reviewForm');
+    const reviewTextArea = document.getElementById('reviewText');
+    // Assuming sareeId is fetched and stored earlier, e.g., on a button or hidden input
+    // Let's pretend it's on the wishlist button for this example
+    const wishlistBtn = document.getElementById('wishlistBtn');
+
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent default submission always
+
+            // --- Validation ---
+            const rating = ratingInput.value;
+
+            // 1. Custom Check: Star Rating
+            if (rating === '0') {
+                alert('Please select a star rating.');
+                // Maybe focus the stars visually?
+                return; // Stop submission
+            }
+
+            // 2. Standard Check for Required Fields (like textarea)
+            // This triggers the browser's validation UI ("Please fill out this field")
+            if (!reviewForm.checkValidity()) {
+                 reviewForm.reportValidity();
+                 return; // Stop submission
+            }
+
+            // --- If All Validation Passed ---
+            const reviewText = reviewTextArea.value;
+            const currentSareeId = wishlistBtn ? wishlistBtn.dataset.sareeId : 'unknown-saree'; // Get ID
+
+            console.log(`Submitting Review for ${currentSareeId}: Rating=${rating}, Review=${reviewText}`);
+
+        
+
+            // --- For Demo Purposes (without backend): Show alert, add to list, reset ---
+            alert('Thank you for your review!');
+
+             // Add the review to the top of the list visually
+             addReviewToList({ author: 'You (Demo)', rating: parseInt(rating), text: reviewText, date: new Date() });
+
+             // Reset the form
+             reviewForm.reset();
+             updateRatingDisplay(0); // Reset stars and feedback text
+
+        });
+    }
+
+    // --- Helper function to add review to the list (Demo) ---
+    const existingReviewsContainer = document.getElementById('existingReviews');
+    function addReviewToList(reviewData) {
+        if (!existingReviewsContainer) return;
+
+        // Remove "Loading/No reviews" message if present
+        const placeholder = existingReviewsContainer.querySelector('p');
+        if (placeholder && (placeholder.textContent.includes('Loading') || placeholder.textContent.includes('No reviews yet'))) {
+            placeholder.remove();
+        }
+
+        const reviewItem = document.createElement('div');
+        reviewItem.classList.add('review-item');
+
+        let starsHTML = '';
+        for (let i = 1; i <= 5; i++) {
+            starsHTML += (i <= reviewData.rating) ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>';
+        }
+
+        const formattedDate = reviewData.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+        reviewItem.innerHTML = `
+            <div class="review-header">
+                <span class="review-author">${escapeHTML(reviewData.author)}</span>
+                <span class="review-rating">${starsHTML}</span>
+                <span class="review-date">${formattedDate}</span>
+            </div>
+            <p class="review-text">${escapeHTML(reviewData.text)}</p>
+        `;
+        existingReviewsContainer.prepend(reviewItem); // Add new review at the top
+    }
+
+     // --- Helper to prevent basic XSS ---
+     function escapeHTML(str) {
+         const div = document.createElement('div');
+         div.textContent = str;
+         return div.innerHTML;
+     }
+
+
+    // --- TODO: Load existing reviews (replace placeholder) ---
+    // Normally you would fetch reviews for the current sareeId here
+    // Example: fetch(`/api/reviews?sareeId=${currentSareeId}`).then(...)
+    // For demo, let's clear the placeholder if it exists after a short delay
+    setTimeout(() => {
+        const placeholder = existingReviewsContainer ? existingReviewsContainer.querySelector('p') : null;
+         if (placeholder && placeholder.textContent.includes('Loading')) {
+              // If after 1 second, still loading, assume no reviews (or replace with actual fetch result)
+              placeholder.textContent = 'No reviews yet. Be the first to leave one!';
+         }
+         // Example: If you had reviews fetched:
+         // const fetchedReviews = [ { author: 'Priya K.', rating: 4, text: 'Beautiful color!', date: new Date(2025, 3, 10)} ];
+         // fetchedReviews.forEach(addReviewToList);
+    }, 1000);
+
+
+}); // End DOMContentLoaded
+</script>
+<!-- ======================== END JAVASCRIPT FOR REVIEWS =================== -->
+    </main>
+
+    <!-- Footer (Re-use the same footer structure) -->
+    <footer class="site-footer-main">
+        <div class="container">
+            <!-- Footer Top: Logo, Tagline, Socials -->
+            <div class="footer-top">
+                <div class="footer-logo-area">
+                    <span class="footer-logo-text">Woven Grace</span>
+                    <span class="footer-tagline">Timeless Elegance, Woven for You</span>
+                </div>
+                <div class="footer-socials">
+                     <!-- Replace # with actual links and use real SVG icons -->
+                    <a href="#" aria-label="Visit our Instagram"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"></path></svg></a>
+                    <a href="#" aria-label="Visit our Facebook"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H17V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z"></path></svg></a>
+                    <a href="#" aria-label="Visit our Pinterest"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13,16.2C12.2,16.2 11.43,15.86 10.88,15.28L9.93,17.04C10.9,17.67 11.96,18 13.06,18C16.16,18 18.56,15.61 18.56,12.5C18.56,9.39 16.16,7 13.06,7C9.96,7 7.56,9.39 7.56,12.5C7.56,13.69 7.9,14.78 8.53,15.69L6.4,18.19C5.31,16.64 5,14.68 5,12.5C5,8.36 8.36,5 12.5,5C16.64,5 20,8.36 20,12.5C20,16.64 16.64,20 12.5,20C11.5,20 10.55,19.81 9.68,19.47L10.58,17.8C11.31,18.09 12.09,18.25 12.91,18.25C13.1,18.25 13.29,18.24 13.47,18.21C13.47,18.21 13.5,18.21 13.5,18.21L13.68,18.18C13.68,18.18 13.68,18.18 13.69,18.17C15.69,17.82 17.25,16.12 17.25,14.08C17.25,12.87 16.58,11.81 15.56,11.26V11.25L15.55,11.25C15.55,11.25 15.55,11.25 15.55,11.25C14.9,10.94 14.15,10.75 13.34,10.75C11.81,10.75 10.5,11.54 9.75,12.72C9.74,12.73 9.73,12.74 9.73,12.75C9.68,12.83 9.64,12.92 9.59,13C9.59,13 9.59,13 9.59,13C9.5,13.25 9.35,13.47 9.29,13.72L11.5,12.9L11.96,14.79L10.88,15.28C11.43,15.86 12.2,16.2 13,16.2Z"></path></svg></a>
+                    <a href="#" aria-label="Visit our YouTube"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.73,18.78 17.93,18.84C17.13,18.91 16.44,18.94 15.84,18.94L15,19C12.81,19 11.2,18.84 10.17,18.56C9.27,18.31 8.69,17.73 8.44,16.83C8.31,16.36 8.22,15.73 8.16,14.93C8.09,14.13 8.06,13.44 8.06,12.84L8,12C8,9.81 8.16,8.2 8.44,7.17C8.69,6.27 9.27,5.69 10.17,5.44C11.2,5.16 12.81,5 15,5L15.84,5.06C16.44,5.06 17.13,5.09 17.93,5.16C18.73,5.22 19.36,5.31 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg></a>
+                </div>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-col"><h4>About Us</h4><ul><li><a href="#">Our Story</a></li><li><a href="#">Our Craftsmanship</a></li><li><a href="#">Sustainability</a></li><li><a href="#">Press & Media</a></li><li><a href="#">Careers</a></li></ul></div>
+                <div class="footer-col"><h4>Shop</h4><ul><li><a href="#">All Collections</a></li><li><a href="#">Kanjivaram</a></li><li><a href="#">Banarasi</a></li><li><a href="#">Chiffon</a></li><li><a href="#">New Arrivals</a></li><li><a href="#">Sale</a></li></ul></div>
+                <div class="footer-col"><h4>Help</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">FAQ</a></li><li><a href="#">Shipping & Returns</a></li><li><a href="#">Size Guide</a></li><li><a href="#">Saree Care</a></li></ul></div>
+                <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Style Blog</a></li><li><a href="#">Lookbook</a></li><li><a href="#">Style Guide</a></li><li><a href="#">Newsletter</a></li><li><a href="#">Testimonials</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Woven Grace. All rights reserved. Weaving elegance since 2023.</p>
+                <ul class="footer-legal-links"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Cookies</a></li><li><a href="#">Sitemap</a></li></ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link the JavaScript file -->
+    <script src="script.js"></script>
+    <script src="saree-detail.js"></script>
+
+</body>
+</html>

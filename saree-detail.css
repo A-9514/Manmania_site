@@ -1,0 +1,64 @@
+/* Star Rating Container */
+.star-rating {
+    display: flex;         /* Arrange stars and text horizontally */
+    align-items: center;   /* Vertically align stars and text */
+    gap: 1rem;             /* Space between star group and feedback text */
+    margin-bottom: 1rem;   /* Space below the rating row */
+    flex-wrap: wrap;       /* Allow feedback text to wrap on small screens if needed */
+}
+
+/* Star Icons Styling (Ensure size/color match) */
+.star-rating .stars {
+    cursor: pointer;
+    font-size: 1.8rem;     /* Adjust size as needed */
+    color: #ddd;           /* Default empty star color */
+    line-height: 1;      /* Prevent extra vertical space */
+}
+.star-rating .stars i {
+    transition: color 0.2s ease-in-out; /* Smooth color change on hover/select */
+}
+.star-rating .stars i:hover,
+.star-rating .stars i.selected {
+    color: #f39c12;        /* Gold/Yellow star color - match target */
+}
+
+/* Feedback Text Styling (e.g., "Very Good!") */
+.rating-feedback {
+    font-weight: 500;
+    color: #e67e22;         /* Warm orange color (adjust to match target) */
+    font-size: 0.95rem;     /* Adjust size */
+    background-color: #fff8e1;/* Light yellow background (adjust to match target) */
+    padding: 0.2rem 0.7rem; /* Padding around the text */
+    border-radius: 4px;     /* Slightly rounded corners */
+    border: 1px solid #ffecb3; /* Light border */
+    display: none;          /* *** Important: Hide by default *** */
+    white-space: nowrap;    /* Prevent text from wrapping */
+}
+
+/* Submit Button (Ensure gradient matches) */
+.submit-review-btn {
+    padding: 0.8rem 1.8rem;
+    /* Use the gradient from the target screenshot */
+    background-image: linear-gradient(to right, #ffcc80, #ffb74d, #ffa726); /* Example Yellow/Orange gradient */
+    color: #424242; /* Darker text color for contrast on light gradient */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+    align-self: flex-start; /* Keep aligned left */
+}
+.submit-review-btn:hover {
+    opacity: 0.9;
+}
+
+/* Adjust Textarea if needed */
+.leave-review textarea {
+    border-color: #ddd; /* Ensure border matches target */
+    border-radius: 6px; /* Match button radius */
+}
+.leave-review textarea:focus {
+    border-color: #ffa726; /* Match button gradient end color */
+    box-shadow: 0 0 0 2px rgba(255, 167, 38, 0.2); /* Match focus color */
+}
