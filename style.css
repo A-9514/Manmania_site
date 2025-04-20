@@ -1,5 +1,5 @@
 html {
-    scroll-behavior: smooth; /* Ensure this rule exists */
+    scroll-behavior: smooth; 
 }
 
 :root {
@@ -14,8 +14,7 @@ html {
     /* --- ADD THIS --- */
     --color-light-purple-bg: #f2e6f7; /* Example light purple */
 
-    /* Define Fonts */
-    /* ... rest of variables ... */
+
 }
 
 
@@ -201,7 +200,7 @@ button {
     /* --- Keep the animation --- */
     animation: floatAnimationVeryFast 9s ease-in-out infinite;
 }
-    /* Remove specific partial positioning like 'right', 'max-width' */
+
 
 /* --- UPDATED Floating Animation Keyframes --- */
 @keyframes floatAnimation {
@@ -350,12 +349,6 @@ button {
     .header-container { justify-content: space-between; }
 }
 
-/* --- Base Reset & Setup --- */
-/* ... (keep existing resets) ... */
-
-html {
-    scroll-behavior: smooth;
-}
 
 :root {
     /* Define Color Palette */
@@ -375,15 +368,6 @@ html {
     --font-card-body: 'Lato', sans-serif;
 }
 
-/* ... (Keep existing body, a, ul, button, container styles) ... */
-
-/* --- Header Styling --- */
-/* ... (Keep existing header styles) ... */
-
-/* --- Hero Section Styling --- */
-/* ... (Keep existing hero styles) ... */
-
-/* Scroll indicator link style */
 .scroll-indicator a {
     color: inherit;
     text-decoration: none;
@@ -440,13 +424,6 @@ html {
     transition: transform 0.4s ease, box-shadow 0.4s ease; /* Increased transition duration slightly */
 }
 
-/* Remove overlay style */
-/* .card::before { display: none; } */ /* No longer needed */
-
-/* Re-add individual card background image styles - THESE ARE NO LONGER USED */
-/* .card-craftsmanship { ... } */
-/* .card-materials { ... } */
-/* .card-design { ... } */
 
 /* Stagger animation delays */
 .card.delay-1 { animation-delay: 0.2s; }
@@ -479,8 +456,6 @@ html {
     display: block;
 }
 
-/* Ensure card content is not positioned relatively/above overlay */
-/* .card h3, .card p { position: static; z-index: auto; } */ /* Reset if previously set */
 
 .card h3 {
     font-family: var(--font-section-title); /* Keep updated Font */
@@ -524,8 +499,6 @@ html {
     .card p { font-size: 0.95rem; }
 }
 
-/* --- Saree Collections Section --- */
-/* ... (Keep existing .collections-section, .collections-header, filters, tags styles) ... */
 
 /* Product Grid - UPDATED for smaller cards */
 .product-grid {
@@ -736,10 +709,6 @@ html {
     background-color: var(--color-light-purple-bg); /* << CHANGED HERE */
 }
 
-/* Keep the rest of the styles for this section */
-/* ... (.collections-header, .category-tags, .saree-row, .product-card, etc.) ... */
-/* Header styles remain mostly the same */
-.collections-header { /* ... keep styles ... */ }
 .collections-title-intro { /* ... keep styles ... */
     font-family: var(--font-section-title); /* Keep updated Font */
     font-size: 2.5rem;
@@ -748,10 +717,7 @@ html {
     margin-bottom: 20px;
     text-align: center; /* Centered for collections */
 }
-.filter-controls { /* ... keep styles ... */ 
-}
-.search-bar { /* ... keep styles ... */ }
-.main-filters { /* ... keep styles ... */ }
+
 
 /* Category Tags styles remain the same */
 .category-tags {
@@ -762,11 +728,6 @@ html {
     padding-bottom: 20px;
     border-bottom: 1px solid #fff;
 }
-.tag-btn { /* ... keep styles ... */ }
-.tag-btn.active { /* ... keep styles ... */ }
-
-
-/* --- NEW Styles for Horizontal Rows --- */
 
 .saree-row {
     margin-bottom: 40px; /* Space between rows */
@@ -790,19 +751,12 @@ html {
     gap: 20px;             /* Use gap for spacing */
     /* Optional: Improve scrolling on touch devices */
     -webkit-overflow-scrolling: touch;
-    /* Optional: Hide scrollbar visually (might not work everywhere) */
-    /* scrollbar-width: none; /* Firefox */
-    /* &::-webkit-scrollbar { display: none; } /* Chrome/Safari/Edge */
 }
 
 /* Class to hide rows via JS */
 .hidden-row {
     display: none;
 }
-
-/* --- UPDATED Product Card Styles for Horizontal Row --- */
-/* --- Saree Collections Section --- */
-/* ... (Keep .collections-section, .collections-header, filters, tags styles) ... */
 
 /* --- Styles for Horizontal Rows --- */
 .saree-row {
@@ -887,16 +841,11 @@ html {
     transform: scale(1.1);
 }
 
-/* Tag overlay styles remain the same */
-.tag-overlay { /* ... keep styles ... */ }
-
 /* Card Content - Adjusted padding, removed fixed height on description */
 .card-content {
     padding: 18px; /* Slightly increased padding */
     position: relative;
 }
-.card-tags { /* ... keep styles ... */ }
-.card-tags .tag { /* ... keep styles ... */ }
 
 .card-content h3 {
     font-family: var(--font-section-title);
@@ -930,8 +879,6 @@ html {
     padding-top: 12px; /* Adjusted padding */
     border-top: 1px solid #eee;
 }
-.card-info .price { /* ... keep styles ... */ }
-.card-info .material { /* ... keep styles ... */ }
 
 /* UPDATED Bookmark button */
 .bookmark-btn {
@@ -1253,29 +1200,6 @@ html {
     transition: all 0.3s ease;
 }
 
-.load-more-btn:hover { /* ... Keep hover styles ... */ }
-.load-more-btn:active { /* ... Keep active styles ... */ }
-
-/* --- Assign Background Images (Use your own relevant images!) --- */
-/* Replace URLs with your images */
-.category-block-kanjivaram {
-    background-image: url('https://images.unsplash.com/photo-1617196084221-767458c74d84?w=600&q=80'); /* Red silk texture */
-}
-.category-block-banarasi {
-     background-image: url('https://images.unsplash.com/photo-1591129798611-533139ab3569?w=600&q=80'); /* Brocade texture */
-}
-.category-block-chiffon {
-     background-image: url('https://images.unsplash.com/photo-1595107269894-1906f17f144f?w=600&q=80'); /* Light floral/flowy */
-}
-.category-block-cotton {
-     background-image: url('https://images.unsplash.com/photo-1561717504-6a4bccaf0d08?w=600&q=80'); /* Woven texture */
-}
-.category-block-designer {
-     background-image: url('https://images.unsplash.com/photo-1587497949159-57f59ba28df6?w=600&q=80'); /* Embellished/modern */
-}
-.category-block-party {
-     background-image: url('https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&q=80'); /* Festive/shiny */
-}
 
 /* --- Animation Keyframes & Delays --- */
 @keyframes fadeInUpCategory {
@@ -1309,12 +1233,6 @@ html {
      .category-explore-section .section-title { font-size: 2rem;}
      .category-explore-section .section-intro { font-size: 0.95rem;}
 }
-
-/* --- Explore by Category Section --- */
-/* ... (Keep existing .category-explore-section, .explore-tag, .section-title, .section-intro styles) ... */
-/* --- Explore by Category Section --- */
-/* ... (Keep .category-explore-section, .explore-tag, .section-title, .section-intro styles) ... */
-
 /* UPDATED Category Grid - Simplified for Debugging */
 .category-grid {
     display: flex;          /* Use Flexbox */
@@ -1344,10 +1262,6 @@ html {
     width: 280px;          /* Fixed width */
     flex: 0 0 auto;        /* Prevent shrinking/growing */
 
-    /* --- TEMPORARILY REMOVED ANIMATION --- */
-    /* opacity: 0; */
-    /* transform: translateY(20px); */
-    /* animation: fadeInUpCategory 0.7s ease forwards; */
     opacity: 1; /* Ensure visible */
     transform: translateY(0); /* Ensure in place */
     /* --- END TEMP REMOVAL --- */
@@ -1379,7 +1293,7 @@ html {
 }
 
 /* --- Keep Background Image Assignments --- */
-/* !!! ENSURE THESE RULES EXIST AND HAVE VALID URLs !!! */
+
 .category-block-kanjivaram { background-image: url('https://cdn.shopify.com/s/files/1/0425/5858/7046/files/blog-Cover.jpg?v=1686995069'); }
 .category-block-banarasi { background-image: url('https://www.suratifabric.com/product-img/SOFT-BANARASI-SILK-SAREE-WITH--1605075082.jpeg'); }
 .category-block-chiffon { background-image: url('https://i.pinimg.com/originals/e4/37/a5/e437a5a8f16d6658763795fa381592ab.jpg'); }
@@ -1391,9 +1305,7 @@ html {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-/* Remove delay classes temporarily if animation is disabled */
-/* .animate-category.delay-1 { animation-delay: 0.1s; } */
-/* ... etc ... */
+
 
 
 /* --- Keep Responsiveness --- */
@@ -1539,8 +1451,6 @@ html {
      transform: translateY(-2px);
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-/* Focus/Active states would also use filter or adjust the gradient */
-
 
 /* --- Responsiveness for Featured Section --- */
 @media (max-width: 768px) {
@@ -1753,12 +1663,10 @@ html {
     .testimonial-box cite { font-size: 0.85rem; }
 }
 
-
-/* --- Why Choose Us Section --- */
 /* --- Why Choose Us Section --- */
 .why-choose-section {
     padding: 80px 0;
-    background-color: var(--color-cream); /* << CHANGED BACK HERE */
+    background-color: var(--color-cream); 
 }
 
 /* Keep the rest of the styles for this section (.feature-row, .feature-text, etc.) as they are */
@@ -1813,13 +1721,7 @@ html {
     display: inline-block;
     font-size: 2rem; /* Size of the icon */
     margin-bottom: 10px;
-    /* Optional: Background circle like philosophy section */
-    /* background-color: var(--color-cream);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    line-height: 60px;
-    text-align: center; */
+
 }
 
 .feature-text h3 {
@@ -1845,8 +1747,7 @@ html {
     animation: fadeInSimple 1s ease forwards; /* Use a simple fade */
     animation-play-state: paused; /* Start paused */
 }
-/* Trigger animation when visible (using JS later if needed, or let it run on load) */
-/* For now, let's make it run after a delay */
+
 .animate-on-scroll-fade {
      animation-play-state: running;
      animation-fill-mode: both; /* Keep final state */
@@ -1910,8 +1811,6 @@ html {
     margin-bottom: 5px;
     line-height: 1;
 }
-/* If using an image logo instead: */
-/* .footer-logo-area img { max-height: 40px; display: block; margin-bottom: 10px; } */
 
 .footer-logo-area .footer-tagline {
     font-size: 0.95rem;
@@ -2052,8 +1951,6 @@ html {
     background-color: var(--color-purple-deep);
     color: var(--color-purple-deep);
 }
-/* (Ensure header text/button colors are light) */
-
 
 /* --- Hero Section Styling --- */
 .hero {
@@ -2101,15 +1998,6 @@ html {
     /* Add padding-top to prevent content from going under the absolute header */
     padding-top: 80px; /* Adjust this value based on your header height */
 }
-
-/* --- REMOVE Hero Background Elements Styles --- */
-/* Delete or comment out these rules entirely: */
-/*
-.hero-background { ... }
-.floating-saree { ... }
-.dark-overlay { ... }
-@keyframes floatAnimation { ... }
-*/
 
 @keyframes weaveFloat {
     0% {
@@ -2233,11 +2121,7 @@ html {
     opacity: 0.7;
     animation: bounce 2s infinite ease-in-out;
 }
-/* Keep @keyframes bounce */
 
-/* --- Saree Detail Page Specific Styles --- */
-
-/* Optional Simple Header */
 .simple-header {
     position: static; /* Not absolute */
     background-color: var(--color-purple-deep);
@@ -2530,13 +2414,6 @@ a.product-card-link {
      .review-header { font-size: 0.9rem;}
      .review-text { font-size: 0.9rem;}
 }
-/* Ensure this CSS rule exists */
-
-
-
-/* ============================================= */
-/*            MODAL (POP-UP) STYLES            */
-/* ============================================= */
 
 /* The Overlay (background dimmer) */
 .modal-overlay {

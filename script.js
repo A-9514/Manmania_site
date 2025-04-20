@@ -1,5 +1,3 @@
-
-// SARRE DATA (Generated from index.html - NEEDS refinement)
 const sareeDatabase = [
     // Kanjivaram Row
     {
@@ -47,7 +45,7 @@ const sareeDatabase = [
         imageUrl: "https://wholetex.sgp1.cdn.digitaloceanspaces.com/full/kanchivaram-pure-heavy-organza-silk-saree-318.jpg",
         description: "Exquisite Diamond Kanjivaram silk saree with traditional motifs.", // Placeholder desc
         price: "$320",
-        material: "Organza Silk", // Guessed from image text
+        material: "Organza Silk", 
         tags: ["Silk", "Kanjivaram", "Organza"],
         specs: [
             { key: "Material", value: "Pure Organza Silk" }, { key: "Weave", value: "Handloom" },
@@ -508,20 +506,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Option 1: Simple Alert Pop-up
             alert('Thank you for your review!');
 
-            // --- (Optional) Option 2: Show inline message ---
-            // const confirmationMessage = document.getElementById('reviewConfirmation');
-            // if (confirmationMessage) {
-            //     confirmationMessage.style.display = 'block';
-            //     // Hide the form temporarily?
-            //     // reviewForm.style.display = 'none';
-            //     // Optionally hide the message after a few seconds
-            //     setTimeout(() => {
-            //          confirmationMessage.style.display = 'none';
-            //          // reviewForm.style.display = 'block'; // Show form again
-            //     }, 5000); // Hide after 5 seconds
-            // }
-
-
             // --- Add review to the page (for demo purposes) ---
             const existingReviews = document.getElementById('existingReviews');
             const reviewCountSpan = document.getElementById('reviewCount');
@@ -575,12 +559,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // --- Get Trigger Button Elements ---
         const signInBtn = document.getElementById('signin-btn-header');
         const joinNowBtn = document.getElementById('joinnow-btn-header');
-        // *** IMPORTANT: Update this selector if your subscribe trigger is different ***
-        // For example, if it's a button inside a form: '#newsletter-form .subscribe-button'
         const subscribeBtn = document.getElementById('subscribe-trigger-btn');
     
         // --- Get Close Button Elements (within each modal) ---
-        // Using optional chaining (?) in case a modal doesn't exist on the page
         const closeSignInBtn = signInModal?.querySelector('.modal-close-btn');
         const closeJoinNowBtn = joinNowModal?.querySelector('.modal-close-btn');
         const closeSubscribeBtn = subscribeModal?.querySelector('.modal-close-btn');
@@ -588,15 +569,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // --- Reusable Functions ---
         function openModal(modalElement) {
             if (modalElement) {
-                // Close any other potentially open modals first (optional)
-                // allModals.forEach(m => m.style.display = 'none');
-    
                 modalElement.style.display = 'flex'; // Use 'flex' to potentially center content
-                // Optional: Add a class for CSS transitions/animations
-                // modalElement.classList.add('is-visible');
-                // Optional: Trap focus inside the modal for accessibility
-                // trapFocus(modalElement);
-            } else {
+            } 
+            else {
                 console.warn("Attempted to open a modal that doesn't exist in the HTML.");
             }
         }
@@ -604,10 +579,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function closeModal(modalElement) {
             if (modalElement) {
                 modalElement.style.display = 'none';
-                // Optional: Remove class for CSS transitions/animations
-                // modalElement.classList.remove('is-visible');
-                // Optional: Release focus trap
-                // releaseFocus();
             }
         }
     
@@ -632,10 +603,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (joinNowBtn && !joinNowModal) {
              console.warn("Join Now button found, but corresponding '#joinnow-modal' is missing in the HTML.");
         }
-    
-        // Subscribe
-        // Note: If subscribe is triggered by form *submission*, the logic is different.
-        // This assumes a simple button opens a modal *before* submission.
+
         if (subscribeBtn && subscribeModal) {
             subscribeBtn.addEventListener('click', (event) => {
                 event.preventDefault();
@@ -679,35 +647,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (modal && modal.style.display === 'flex') { // Match display style used in openModal
                         closeModal(modal);
                     }
-                    // If using classes:
-                    // if (modal && modal.classList.contains('is-visible')) {
-                    //    closeModal(modal);
-                    // }
                 });
             }
         });
-    
-        // --- Featured Pop-up ---
-        // Add logic here if you have a *specific* pop-up for "Featured".
-        // It's more common for "Featured" to be a link to a section or page.
-        // Example if you had a featured modal:
-        /*
-        const featuredBtn = document.getElementById('featured-trigger-btn'); // Example ID
-        const featuredModal = document.getElementById('featured-modal'); // Example ID
-        const closeFeaturedBtn = featuredModal?.querySelector('.modal-close-btn');
-    
-        if (featuredBtn && featuredModal) {
-            featuredBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                openModal(featuredModal);
-            });
-        }
-        if (closeFeaturedBtn && featuredModal) {
-            closeFeaturedBtn.addEventListener('click', () => closeModal(featuredModal));
-        }
-        */
-    
-    
-        // --- Other JavaScript code for your site can go here ---
-    
     }); // End DOMContentLoaded Listener

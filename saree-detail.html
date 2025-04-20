@@ -62,13 +62,10 @@
                 <div class="detail-image-wrapper">
                      <!-- Placeholder Image - JS will update src and alt -->
                     <img src="https://cliosilks.com/cdn/shop/files/DSC04421_1800x1800.jpg?v=1700922359"  style="width: 300px; height: auto;"alt="Regal Red Kanjivaram">
-                    <!-- Tags on Image (Can be updated by JS if needed) -->
-                    <!-- <span class="tag-overlay on-detail silk">Silk</span> -->
-                    <!-- <span class="tag-overlay on-detail kanjivaram">Kanjivaram</span> -->
                 </div>
 
                 <!-- Text Details -->
-                 <!-- JS will update textContent -->
+      
                 <h1 class="detail-title">Regal Red Kanjivaram</h1>
 
                 <div class="detail-rating-reviews">
@@ -144,34 +141,7 @@
     <div class="reviews-list" id="existingReviews">
         <!-- Placeholder - JS should replace this content -->
         <p style="text-align: center; color: #666;">Loading reviews...</p>
-
-        <!-- Example Structure (JS should generate this dynamically) -->
-        <!--
-        <div class="review-item">
-            <div class="review-header">
-                <span class="review-author">Jane D.</span>
-                <span class="review-rating">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </span>
-                <span class="review-date">April 15, 2025</span>
-            </div>
-            <p class="review-text">Absolutely gorgeous saree! The quality is amazing.</p>
-        </div>
-        <div class="review-item">
-            <div class="review-header">
-                <span class="review-author">Priya K.</span>
-                <span class="review-rating">
-                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                </span>
-                <span class="review-date">April 10, 2025</span>
-            </div>
-            <p class="review-text">Very beautiful color and soft silk. Took a little while to ship.</p>
-        </div>
-         -->
     </div>
-    <!-- Add Load More Button if using pagination
-    <button class="btn load-more-reviews-btn">Load More Reviews</button>
-    -->
 
     <!-- Leave a Review Form -->
     <div class="leave-review sidebar-widget"> <!-- Re-using sidebar-widget class for consistent box styling -->
@@ -263,12 +233,9 @@
         border-bottom: none;
         margin-bottom: 0;
     }
-    /* === Modify CSS rules inside the <style> block or style.css === */
-
 /* Existing Reviews List Item Header */
 .review-header {
     display: flex;
-    /* CHANGE THIS: Instead of space-between, align items to the start */
     justify-content: flex-start; /* Align items to the left */
     align-items: baseline; /* Align text baselines for better look */
     margin-bottom: 0.75rem; /* Slightly more space below header */
@@ -344,10 +311,10 @@
     .star-rating .stars i {
         transition: color 0.2s ease-in-out;
     }
-    .star-rating .stars i:hover { /* Hover effect */
+    .star-rating .stars i:hover { 
         color: #f7d794; /* Lighter gold on hover */
     }
-    .star-rating .stars i.selected { /* Selected state */
+    .star-rating .stars i.selected { 
         color: #f39c12; /* Gold/Yellow star color */
     }
      /* Ensure Font Awesome solid/regular classes work */
@@ -597,20 +564,12 @@ document.addEventListener('DOMContentLoaded', () => {
          return div.innerHTML;
      }
 
-
-    // --- TODO: Load existing reviews (replace placeholder) ---
-    // Normally you would fetch reviews for the current sareeId here
-    // Example: fetch(`/api/reviews?sareeId=${currentSareeId}`).then(...)
-    // For demo, let's clear the placeholder if it exists after a short delay
     setTimeout(() => {
         const placeholder = existingReviewsContainer ? existingReviewsContainer.querySelector('p') : null;
          if (placeholder && placeholder.textContent.includes('Loading')) {
               // If after 1 second, still loading, assume no reviews (or replace with actual fetch result)
               placeholder.textContent = 'No reviews yet. Be the first to leave one!';
          }
-         // Example: If you had reviews fetched:
-         // const fetchedReviews = [ { author: 'Priya K.', rating: 4, text: 'Beautiful color!', date: new Date(2025, 3, 10)} ];
-         // fetchedReviews.forEach(addReviewToList);
     }, 1000);
 
 

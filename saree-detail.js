@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Keep existing code for getting sareeId, loading data, etc. ---
-
     // --- Star Rating ---
     const starsContainer = document.querySelector('.star-rating .stars');
     const ratingInput = document.getElementById('ratingValue');
@@ -16,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         5: "Excellent!"
     };
 
-    if (starsContainer && ratingInput && ratingFeedbackSpan) { // Check all elements exist
+    if (starsContainer && ratingInput && ratingFeedbackSpan) { 
         const stars = starsContainer.querySelectorAll('i');
 
         // Function to update stars AND feedback text based on a value
@@ -101,6 +99,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     } // End reviewForm check
 
-    // --- Keep other JS code (escapeHTML, wishlist, etc.) ---
 
 }); // End DOMContentLoaded
